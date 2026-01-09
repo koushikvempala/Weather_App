@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+/* App Wrapper */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  padding: 30px 16px 20px;
+}
+
+.intro h2 {
+  font-size: 24px;
+}
+
+.intro p {
+  font-size: 14px;
+  max-width: 480px;
+  margin: auto;
+}
+
+/* Card Container */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+/* Weather Card */
+.card {
+  width: 100%;
+  max-width: 320px;
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background: #2193b0;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Result */
+.result {
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ✅ 375px */
+@media (min-width: 375px) {
+  .card {
+    max-width: 340px;
+  }
+}
+
+/* ✅ 425px */
+@media (min-width: 425px) {
+  .card {
+    max-width: 360px;
+  }
+}
+
+/* ✅ 768px */
+@media (min-width: 768px) {
+  .intro h2 {
+    font-size: 28px;
+  }
+
+  .card {
+    max-width: 380px;
+  }
+}

@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: #1f2937;
+  color: #d1d5db;
+  padding: 24px 16px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-title {
+  font-size: 18px;
+  color: white;
+}
+
+.footer-desc {
+  max-width: 500px;
+  margin: 8px auto;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-meta,
+.footer-copy {
+  font-size: 13px;
+  opacity: 0.8;
+}

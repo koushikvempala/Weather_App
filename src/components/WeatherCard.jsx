@@ -1,13 +1,8 @@
 import React, { useState } from "react";
-import "./Home.css";
 
-const Home = () => {
+const WeatherCard = () => {
   const [city, setCity] = useState("");
   const [result, setResult] = useState("");
-
-  const Handler = (e) => {
-    setCity(e.target.value);
-  };
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -17,14 +12,16 @@ const Home = () => {
       return;
     }
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d885aa1d783fd13a55050afeef620fcb`)
+    fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d885aa1d783fd13a55050afeef620fcb`
+    )
       .then((res) => {
-        if (!res.ok) throw new Error("City not found");
+        if (!res.ok) throw new Error();
         return res.json();
       })
       .then((data) => {
-        const celsius = data.main.temp - 273.15;
-        setResult(`Temperature at ${city}: ${celsius.toFixed(2)} °C`);
+        const temp = data.main.temp - 273.15;
+        setResult(`Temperature in ${city}: ${temp.toFixed(2)} °C`);
         setCity("");
       })
       .catch(() => setResult("Invalid city name"));
@@ -33,13 +30,13 @@ const Home = () => {
   return (
     <div className="container">
       <div className="card">
-        <h2 className="card-title">Weather App</h2>
+        <h3>Weather Search</h3>
 
         <form onSubmit={submitHandler}>
           <input
             type="text"
             value={city}
-            onChange={Handler}
+            onChange={(e) => setCity(e.target.value)}
             placeholder="Enter city name"
           />
           <input type="submit" value="Get Temperature" />
@@ -51,4 +48,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default WeatherCard;
