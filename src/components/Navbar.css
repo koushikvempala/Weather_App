@@ -54,11 +54,3 @@
     flex-wrap: wrap;
   }
 }
-.nav-links a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
