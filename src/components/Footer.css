@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 .footer {
   background-color: #1f2937;
   color: #d1d5db;
@@ -19,7 +15,7 @@
   max-width: 500px;
   margin: 8px auto;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .footer-meta,

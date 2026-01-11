@@ -1,0 +1,39 @@
+/* ===============================
+   FEATURES PAGE
+================================ */
+
+.features-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.features-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  border-left: 5px solid #2aa6b8;
+  border-radius: 6px;
+}
+
+.feature-card h4 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 📱 Tablet */
+@media (min-width: 768px) {
+  .features-container h2 {
+    font-size: 28px;
+  }
+}

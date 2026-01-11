@@ -9,7 +9,9 @@ const Footer = () => {
         Real-time weather information for cities worldwide.
       </p>
       <p className="footer-meta">Powered by OpenWeather API</p>
-      <p className="footer-copy">© 2026 Koushik Vempala</p>
+      <p className="footer-copy">
+        © {new Date().getFullYear()} Koushik Vempala
+      </p>
     </footer>
   );
 };

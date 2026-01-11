@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../pages/Home.css";
 
 const WeatherCard = () => {
   const [city, setCity] = useState("");

@@ -1,0 +1,42 @@
+/* ===============================
+   ABOUT PAGE
+================================ */
+
+.about-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.about-container h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.about-container h3 {
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+.about-container p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.about-container ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.about-container li {
+  margin-bottom: 6px;
+}
+
+/* 📱 Tablet */
+@media (min-width: 768px) {
+  .about-container h2 {
+    font-size: 28px;
+  }
+}
