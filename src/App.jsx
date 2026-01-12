@@ -1,6 +1,4 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
-
 import Home from "./pages/Home";
 import About from "./components/About";
 import Features from "./components/Features";
@@ -12,8 +10,6 @@ const App = () => {
   return (
     <div className="app-wrapper">
       <Navbar />
-
-      {/* MAIN CONTENT */}
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
