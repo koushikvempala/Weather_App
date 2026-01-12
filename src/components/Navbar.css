@@ -1,49 +1,54 @@
-/* Navbar container */
 .navbar {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(90deg, #2193b0, #6dd5ed);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
-  background: #6fb1c6;
+  justify-content: space-between;
 }
 
-/* Left section */
-.nav-left .logo {
+.nav-left {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.logo {
   font-size: 20px;
   font-weight: 600;
-  color: #ffffff;
 }
 
-.nav-left .tagline {
+.tagline {
   font-size: 12px;
-  margin-left: 8px;
-  color: #eaf6fb;
+  opacity: 0.9;
 }
 
-/* Links container */
 .nav-links {
+  list-style: none;
   display: flex;
-  gap: 24px;
+  gap: 18px;
 }
 
-/* 🔥 IMPORTANT: Fix Link styling */
 .nav-links a {
-  text-decoration: none;   /* remove underline */
-  color: #ffffff;          /* remove blue */
-  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
 }
 
-/* Hover state */
 .nav-links a:hover {
-  color: #eaf6fb;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-/* Visited / focus / active (prevents blue underline) */
-.nav-links a:visited,
-.nav-links a:focus,
-.nav-links a:active {
-  color: #ffffff;
-  text-decoration: none;
-  outline: none;
+/* 📱 Mobile & Tablet */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
