@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import About from "./components/About";
@@ -10,22 +10,20 @@ import "./App.css";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="app-wrapper">
-        <Navbar />
+    <div className="app-wrapper">
+      <Navbar />
 
-        {/* ✅ MAIN CONTENT WRAPPER */}
-        <div className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/features" element={<Features />} />
-          </Routes>
-        </div>
-
-        <Footer />
+      {/* MAIN CONTENT */}
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Features" element={<Features />} />
+        </Routes>
       </div>
-    </BrowserRouter>
+
+      <Footer />
+    </div>
   );
 };
 

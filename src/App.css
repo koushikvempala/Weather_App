@@ -8,8 +8,13 @@
 }
 
 html,
-body,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 #root {
+  width: 100%;
   height: 100%;
 }
 
@@ -20,14 +25,15 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #f3f4f6;
   color: #111827;
-  overflow-x: hidden; /* ⬅ prevents horizontal scroll */
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 /* ===============================
-   APP LAYOUT (CRITICAL)
+   APP LAYOUT
 ================================ */
 .app-wrapper {
-  min-height: 100%;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -36,5 +42,96 @@ body {
    MAIN CONTENT AREA
 ================================ */
 .main-content {
-  flex: 1; /* ⬅ THIS is what makes pages fit */
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* ===============================
+   PAGE SECTIONS (HOME / ABOUT / FEATURES)
+================================ */
+.page {
+  width: 100%;
+  max-width: 1200px; /* keeps content readable */
+}
+
+/* ===============================
+   WEATHER CARD
+================================ */
+.weather-card,
+.weather-container {
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   INPUTS & BUTTONS
+================================ */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0284c7;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.navbar {
+  width: 100%;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  width: 100%;
+  margin-top: auto;
+  background-color: #111827;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===============================
+   RESPONSIVE (MOBILE)
+================================ */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 20px 12px;
+  }
+
+  .weather-card,
+  .weather-container {
+    max-width: 100%;
+  }
+}
+.main-content {
+  flex: 1;
+  display: flex;
 }
