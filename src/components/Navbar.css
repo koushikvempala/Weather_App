@@ -1,54 +1,49 @@
+/* Navbar container */
 .navbar {
-  width: 100%;
-  padding: 14px 20px;
-  background: linear-gradient(90deg, #2193b0, #6dd5ed);
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #6fb1c6;
 }
 
-.nav-left {
-  display: flex;
-  flex-direction: column;
-  color: white;
-}
-
-.logo {
+/* Left section */
+.nav-left .logo {
   font-size: 20px;
   font-weight: 600;
+  color: #ffffff;
 }
 
-.tagline {
+.nav-left .tagline {
   font-size: 12px;
-  opacity: 0.9;
+  margin-left: 8px;
+  color: #eaf6fb;
 }
 
+/* Links container */
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 18px;
+  gap: 24px;
 }
 
+/* 🔥 IMPORTANT: Fix Link styling */
 .nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
+  text-decoration: none;   /* remove underline */
+  color: #ffffff;          /* remove blue */
+  font-weight: 500;
 }
 
+/* Hover state */
 .nav-links a:hover {
-  text-decoration: underline;
+  color: #eaf6fb;
+  text-decoration: none;
 }
 
-/* 📱 Mobile & Tablet */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+/* Visited / focus / active (prevents blue underline) */
+.nav-links a:visited,
+.nav-links a:focus,
+.nav-links a:active {
+  color: #ffffff;
+  text-decoration: none;
+  outline: none;
 }
